@@ -125,6 +125,11 @@ nano /etc/security/limits.conf
 # Save & close the file
 ctrl+o
 ctrl+x
+
+If you happen to be logged into Ubuntu w/ a GUI, you also need to modify /etc/systemd/user.conf and /etc/systemd/system.conf with the following line (this takes care of graphical login):
+
+DefaultLimitNOFILE=1048576
+
 ```
 
 ## Disable firewall
